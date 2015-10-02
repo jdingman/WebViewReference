@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Webby" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Hfc-uK-zEu">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="560"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </webView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="G1i-3A-dBF">
+                                <rect key="frame" x="220" y="562" width="161" height="30"/>
+                                <state key="normal" title="Send Data to Web View"/>
+                                <connections>
+                                    <action selector="sendMessageToWebView:" destination="BYZ-38-t0r" eventType="touchUpInside" id="LmC-mx-iZ2"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Hfc-uK-zEu" secondAttribute="bottom" constant="40" id="8Qa-mP-dPl"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Hfc-uK-zEu" secondAttribute="trailing" constant="-20" id="GmO-zd-HPS"/>
+                            <constraint firstItem="Hfc-uK-zEu" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="-20" id="QtT-AY-JgE"/>
+                            <constraint firstItem="Hfc-uK-zEu" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="aUt-4M-1bb"/>
+                            <constraint firstItem="G1i-3A-dBF" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="eOD-EG-BCB"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="G1i-3A-dBF" secondAttribute="bottom" constant="8" id="qgm-4z-ClW"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="localWebView" destination="Hfc-uK-zEu" id="2vM-Nz-Baj"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="340" y="429"/>
+        </scene>
+    </scenes>
+</document>
